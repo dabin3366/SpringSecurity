@@ -69,9 +69,19 @@ public class HomeController {
 		logger.info("error : "+error);
 		logger.info("logout : "+logout);
 		
-		model.addAttribute("error","로그인 에러(꼐정문제)");
+		model.addAttribute("error","로그인 에러(계정문제)");
 		model.addAttribute("logout", "사용자 로그아웃!!!");
 		
 	}
+	@GetMapping("/customLogout")
+	public void myLogout() throws Exception{
+		logger.info("myLogout() 호출!");
+	}
+	
+	
+	
+	
+	
+	
 	
 }

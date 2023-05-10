@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<h1>Admin.jsp</h1>
+	
+	<input type="button" value="로그아웃" onclick="location.href='/customLogout'">
 </body>
 </html>

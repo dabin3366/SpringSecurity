@@ -22,3 +22,31 @@
  	  무조건 CSRF토큰을 사용
 
  	  CSRF토큰 : 사용자가 임의로 변경되는 특정한 토큰값을 서버에서 체크
+ 	  
+ 	  시큐리티 유저 생성
+ 	  public static final String DEF_CREATE_USER_SQL = 
+ 	  				"insert into users (username, password, enabled) values (?,?,?)";
+ 	  =>
+ 	    create table users(
+ 	    	username varchar(50) primary key,
+ 	    	password varchar(50) not null,
+ 	    	enabled varchar(1) default '1'
+ 	    );
+ 	    
+ 	  시큐리티 권한 설정
+ 	  public static final String DEF_INSERT_AUTHORITY_SQL = 
+ 	  				"insert into authorities (username, authority) values (?,?)";
+ 	  =>
+ 	  	create table authorities(
+ 	  		username varchar(50) not null,
+ 	  		authority varchar(50) not null,
+ 	  		constraint fk_authorities_users foreign key(username) references users(username)
+ 	  	);
+ 	  				
+ 	  				
+ 	  				
+ 	  				
+ 	  				
+ 	  				
+ 	  				
+ 	  				

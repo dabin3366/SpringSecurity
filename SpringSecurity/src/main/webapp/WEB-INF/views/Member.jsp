@@ -8,5 +8,8 @@
 </head>
 <body>
 	<h1>Member.jsp</h1>
+	
+	
+	<input type="button" value="로그아웃" onclick="location.href='/customLogout'">
 </body>
 </html>
